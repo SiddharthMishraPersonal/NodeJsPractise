@@ -21,7 +21,19 @@ var skierTerms = [
         defined: "Powder after it has been sufficiently skied."
     },
     {
-        term: "Test",
+        term: "AAA",
+        defined: "My own test."
+    },
+    {
+        term: "BBB",
+        defined: "My own test."
+    },
+    {
+        term: "CCC",
+        defined: "My own test."
+    },
+    {
+        term: "DDD",
         defined: "My own test."
     }
 ];
