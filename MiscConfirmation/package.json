@@ -1,7 +1,7 @@
 {
-  "name": "express-websocket-server",
+  "name": "misc-confirmation",
   "version": "1.0.0",
-  "description": "Uses express with websocket to server the request.",
+  "description": "Uses to test different scenarios",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +9,6 @@
   "author": "Siddharth Mishra",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.1",
-    "http": "0.0.0",
-    "url": "^0.11.0",
-    "ws": "^2.0.3"
+    "lodash": "^4.17.4"
   }
 }

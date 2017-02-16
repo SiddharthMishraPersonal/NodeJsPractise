@@ -1,20 +1,14 @@
-let webSocket = require('ws');
-let ws = new webSocket('ws://localhost:3000');
-
-ws.on('open', ()=>{
-    console.log(`Connected at : ${Date.now()}`);
-    ws.send(`siddharth mishra on client.${Date.now()}`); 
-    console.log('Message sent.')
-});
-
-ws.on('close', ()=> {
-  console.log(`Disconnected at : ${Date.now()}`);
-});
-
-ws.on('message', (data, flags) =>{
-  console.log(`Roundtrip time: ${Date.now() - data} ms`, flags);
+const WebSocket = require('ws');
  
-  setTimeout(function timeout() {
-    ws.send(Date.now());
-  }, 500);
+const ws = new WebSocket('ws://localhost:3000/foo');
+ 
+ws.on('open', function open() {
+  ws.send('something');
+});
+ 
+ws.on('message', function incoming(data, flags) {
+  // flags.binary will be set if a binary data is received. 
+  // flags.masked will be set if the data was masked. 
+    
+    console.log(data);
 });

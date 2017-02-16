@@ -1,7 +1,7 @@
 {
-  "name": "express-websocket-server",
+  "name": "server-websocket",
   "version": "1.0.0",
-  "description": "Uses express with websocket to server the request.",
+  "description": "Uses WebSocket NPM Package https://www.npmjs.com/package/websocket",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.1",
-    "http": "0.0.0",
-    "url": "^0.11.0",
-    "ws": "^2.0.3"
+    "websocket": "^1.0.24"
   }
 }
