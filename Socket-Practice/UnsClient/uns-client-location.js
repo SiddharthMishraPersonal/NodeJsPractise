@@ -1,5 +1,5 @@
 let webSocket = require('ws');
-let ws = new webSocket("");
+let ws = new webSocket("ws://localhost:65001/unsapi/location/1/ElginPD/sysgrp:all_presentities@ElginPD");
 
 ws.on('open', ()=>{
     console.log(`Connected at : ${Date.now()}`);
