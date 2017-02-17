@@ -1,13 +1,15 @@
 'use strict';
 let WebSocket = require('ws');
 let url = require('url');
-let http = require('http');
+let express = require('express');
+let expressApp = express();
+let server = expressApp.listen(3000);
 
 const wss1 = new WebSocket.Server({ noServer: true });
 const wss2 = new WebSocket.Server({ noServer: true });
 const server = http.createServer();
 
-server.on('upgrade', (request, socket, head) => {
+expressApp.on('upgrade', (request, socket, head) => {
   const pathname = url.parse(request.url).pathname;
 
   if (pathname === '/location') {
@@ -23,9 +25,6 @@ server.on('upgrade', (request, socket, head) => {
   }
 });
 
-
-
-server.listen(3000);
 
 wss1.on('connection', (websock)=>{    
     console.log("connection on /test/location");
